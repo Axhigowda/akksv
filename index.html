@@ -1233,11 +1233,21 @@
             color: rgba(255, 255, 255, .28);
         }
 
-        /* ── REVEAL ── */
+        /*!* ── REVEAL ── *!*/
         .rv {
             opacity: 0;
             transform: translateY(20px);
             transition: opacity .65s, transform .65s;
+        }
+
+        /* Only phones */
+        @media (max-width: 767px) {
+            .rv {
+                padding-top: 50px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+            }
         }
 
         .rv.on {
