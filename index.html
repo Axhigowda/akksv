@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <title>Akhila Karnataka Kuvempu Samskrutika Vedike (R)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Kannada:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+          rel="stylesheet"/>
+    <style>
+        :root {
+            --gold: #C9900C;
+            --gold-l: #F0C040;
+            --gold-p: #FAE8A0;
+            --deep: #120200;
+            --maroon: #7B1C1C;
+            --saffron: #D4560A;
+            --cream: #FBF5E6;
+            --white: #FFFDF7;
+            --red: #CC0000;
+            --yellow: #F5B400;
+            --text: #1A0500;
+            --mid: #4A2E0A;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Libre Baskerville", serif;
+            background: var(--cream);
+            color: var(--text);
+            overflow-x: hidden;
+        }
+
+        /* ── LANG BAR ── */
+        #lb {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 9999;
+            background: var(--deep);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 24px;
+        }
+
+        .lb-reg {
+            color: rgba(255, 255, 255, .45);
+            font-size: 11px;
+        }
+
+        .lb-r {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .lb-r span {
+            color: rgba(255, 255, 255, .45);
+            font-size: 11px;
+        }
+
+        .lbtn {
+            padding: 3px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--gold);
+            background: transparent;
+            color: var(--gold-l);
+            cursor: pointer;
+            font-size: 11px;
+            transition: all .2s;
+        }
+
+        .lbtn.on {
+            background: var(--gold);
+            color: var(--deep);
+            font-weight: 700;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 998;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 32px;
+            background: rgba(18, 2, 0, .94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(201, 144, 12, .3);
+        }
+
+        .nl {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .ne {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+            flex-shrink: 0;
+        }
+
+        .ne img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .ntb {
+        }
+
+        .nkn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--red);
+            line-height: 1.2;
+        }
+
+        .nen {
+            font-size: 10px;
+            color: var(--gold-p);
+            letter-spacing: .04em;
+            line-height: 1.3;
+        }
+
+        .nsub {
+            font-size: 10px;
+            color: rgba(255, 255, 255, .38);
+            letter-spacing: .04em;
+        }
+
+        .nr {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+        }
+
+        .nr a {
+            color: rgba(255, 255, 255, .72);
+            text-decoration: none;
+            font-size: 13px;
+            letter-spacing: .04em;
+            transition: color .2s;
+        }
+
+        .nr a:hover {
+            color: var(--gold-l);
+        }
+
+        .ncta {
+            background: var(--red);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            padding: 9px 22px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .04em;
+            transition: all .2s;
+        }
+
+        .ncta:hover {
+            background: #DD2222;
+            transform: translateY(-1px);
+        }
+
+        /* FIX 3: language switcher styling */
+        .lang-switch {
+            display: flex;
+            gap: 6px;
+            margin-left: 18px;
+            padding-left: 18px;
+            border-left: 1px solid rgba(201, 144, 12, .3);
+        }
+
+        /* ── HERO ── */
+        #hero {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 68px; /* FIX 4: changed from 80px to 68px */
+        }
+
+        .hbg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(155deg, #0D0100 0%, #2A0606 35%, #180402 70%, #060C08 100%);
+        }
+
+        .hpat {
+            position: absolute;
+            inset: 0;
+            opacity: .04;
+            background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 30px);
+            background-size: 30px 30px;
+        }
+
+        .hglow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            top: 50%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(circle, rgba(201, 144, 12, .1) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hbar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--red) 50%, var(--yellow) 50%);
+        }
+
+        .hcontent {
+            position: relative;
+            z-index: 2;
+            max-width: 1100px;
+            width: 100%;
+            padding: 0 40px;
+            display: grid;
+            grid-template-columns:1.1fr 1fr;
+            align-items: center;
+            gap: 56px;
+        }
+
+        /* Hero text */
+        .hkn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 34px;
+            font-weight: 700;
+            color: var(--red);
+            line-height: 1.3;
+            margin-bottom: 4px;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, .7);
+        }
+
+        .hen {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 20px;
+            font-weight: 400;
+            color: var(--gold-p);
+            margin-bottom: 20px;
+            letter-spacing: .02em;
+        }
+
+        .hbadge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(201, 144, 12, .12);
+            border: 1px solid rgba(201, 144, 12, .3);
+            border-radius: 20px;
+            padding: 5px 14px;
+            margin-bottom: 20px;
+            color: var(--gold-p);
+            font-size: 11px;
+            letter-spacing: .07em;
+        }
+
+        .hbadge::before {
+            content: "✦";
+            font-size: 9px;
+            color: var(--gold);
+        }
+
+        .hsub {
+            color: rgba(255, 255, 255, .68);
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 26px;
+        }
+
+        .hsub-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 14px;
+        }
+
+        .hcerts {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 28px;
+        }
+
+        .ctag {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 4px;
+            padding: 5px 10px;
+            color: rgba(255, 255, 255, .78);
+            font-size: 11px;
+        }
+
+        .ctag .dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: #4CAF50;
+            flex-shrink: 0;
+        }
+
+        .hbtns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn1 {
+            background: var(--red);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .15);
+            cursor: pointer;
+            padding: 13px 28px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: .04em;
+            transition: all .2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn1:hover {
+            background: #DD2222;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(150, 0, 0, .3);
+        }
+
+        .btn2 {
+            background: transparent;
+            color: var(--gold-l);
+            border: 1.5px solid var(--gold);
+            cursor: pointer;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-size: 14px;
+            letter-spacing: .04em;
+            transition: all .2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn2:hover {
+            background: rgba(201, 144, 12, .1);
+            transform: translateY(-2px);
+        }
+
+        /* Hero portrait */
+        .hport {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .port-ring {
+            width: 340px;
+            height: 340px;
+            border-radius: 50%;
+            border: 2px solid rgba(201, 144, 12, .5);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .port-ring::before {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            border-radius: 50%;
+            border: 1px dashed rgba(201, 144, 12, .22);
+        }
+
+        .port-ring::after {
+            content: "";
+            position: absolute;
+            inset: -14px;
+            border-radius: 50%;
+            border: 1px solid rgba(204, 0, 0, .22);
+        }
+
+        .port-img {
+            width: 270px;
+            height: 270px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--gold);
+            box-shadow: 0 0 40px rgba(201, 144, 12, .22), 0 0 80px rgba(0, 0, 0, .5);
+        }
+
+        .port-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .port-tag {
+            position: absolute;
+            bottom: -58px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            white-space: nowrap;
+            background: rgba(18, 2, 0, .88);
+            border: 1px solid rgba(201, 144, 12, .35);
+            border-radius: 6px;
+            padding: 9px 18px;
+            backdrop-filter: blur(8px);
+        }
+
+        .ptn {
+            color: var(--gold-l);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .ptn-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 14px;
+            color: var(--gold-p);
+        }
+
+        .ptr {
+            color: rgba(255, 255, 255, .48);
+            font-size: 11px;
+            letter-spacing: .07em;
+            margin-top: 2px;
+        }
+
+        .pip {
+            position: absolute;
+            background: rgba(18, 2, 0, .9);
+            border: 1px solid rgba(201, 144, 12, .4);
+            border-radius: 7px;
+            padding: 9px 13px;
+            text-align: center;
+            backdrop-filter: blur(6px);
+        }
+
+        .pip-n {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--gold-l);
+        }
+
+        .pip-l {
+            font-size: 10px;
+            color: rgba(255, 255, 255, .52);
+            margin-top: 1px;
+        }
+
+        .p1 {
+            top: 8px;
+            right: -22px;
+        }
+
+        .p2 {
+            bottom: 88px;
+            left: -28px;
+        }
+
+        .p3 {
+            top: 50%;
+            right: -38px;
+            transform: translateY(-50%);
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 88px 40px;
+        }
+
+        .si {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .slbl {
+            font-size: 11px;
+            letter-spacing: .2em;
+            text-transform: uppercase;
+            color: var(--saffron);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .sh2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 40px;
+            font-weight: 300;
+            color: var(--text);
+            line-height: 1.15;
+            margin-bottom: 14px;
+        }
+
+        .sh2 em {
+            font-style: italic;
+            color: var(--maroon);
+        }
+
+        .sh2-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .slead {
+            font-size: 16px;
+            color: var(--mid);
+            line-height: 1.85;
+            max-width: 640px;
+            margin-bottom: 44px;
+        }
+
+        .slead-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 15px;
+        }
+
+        /* ── ABOUT ── */
+        #about {
+            background: var(--white);
+        }
+
+        .ag {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 72px;
+            align-items: center;
+        }
+
+        .apull {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+            font-style: italic;
+            color: var(--maroon);
+            border-left: 3px solid var(--gold);
+            padding-left: 18px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .ab {
+            font-size: 15px;
+            line-height: 1.9;
+            color: var(--mid);
+            margin-bottom: 16px;
+        }
+
+        .ab-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 14px;
+        }
+
+        .tl {
+            position: relative;
+            padding-left: 26px;
+        }
+
+        .tl::before {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--gold), transparent);
+        }
+
+        .tli {
+            position: relative;
+            margin-bottom: 26px;
+        }
+
+        .tld {
+            position: absolute;
+            left: -26px;
+            top: 4px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 3px solid var(--cream);
+        }
+
+        .tly {
+            font-size: 11px;
+            color: var(--saffron);
+            letter-spacing: .1em;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .tlt {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 2px;
+        }
+
+        .tlt-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 13px;
+        }
+
+        .tlb {
+            font-size: 13px;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+
+        .tlb-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 12px;
+        }
+
+        /* ── STATS ── */
+        #stats {
+            background: linear-gradient(135deg, var(--deep), var(--maroon));
+            position: relative;
+            overflow: hidden;
+        }
+
+        #stats::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: .05;
+            background-image: repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 36px);
+            background-size: 36px 36px;
+        }
+
+        .sg {
+            display: grid;
+            grid-template-columns:repeat(5, 1fr);
+            position: relative;
+        }
+
+        .sc {
+            padding: 40px 18px;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, .07);
+        }
+
+        .sc:last-child {
+            border-right: none;
+        }
+
+        .sn {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 50px;
+            font-weight: 300;
+            color: var(--gold-l);
+            line-height: 1;
+        }
+
+        .ss {
+            font-size: 26px;
+            color: var(--gold);
+        }
+
+        .sl {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .58);
+            margin-top: 6px;
+            letter-spacing: .04em;
+        }
+
+        .sl-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 11px;
+        }
+
+        /* ── PROGRAMS ── */
+        #programs {
+            background: var(--cream);
+        }
+
+        .pg {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .pc {
+            background: var(--white);
+            border: 1px solid rgba(201, 144, 12, .14);
+            border-radius: 8px;
+            padding: 28px;
+            transition: all .3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pc::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--red), var(--gold));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform .3s;
+        }
+
+        .pc:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 36px rgba(0, 0, 0, .09);
+            border-color: rgba(201, 144, 12, .38);
+        }
+
+        .pc:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pi {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .pt {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 5px;
+        }
+
+        .pt-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 14px;
+        }
+
+        .pd {
+            font-size: 13px;
+            color: var(--mid);
+            line-height: 1.7;
+        }
+
+        .pd-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 12px;
+        }
+
+        /* ── FOUNDER ── */
+        #founder {
+            background: #F7EDD8;
+        }
+
+        .fg {
+            display: grid;
+            grid-template-columns:330px 1fr;
+            gap: 68px;
+            align-items: start;
+        }
+
+        .fcard {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 18px 56px rgba(0, 0, 0, .11);
+            border: 1px solid rgba(201, 144, 12, .18);
+        }
+
+        .fimg {
+            height: 360px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .fimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .fimg-ov {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: linear-gradient(to top, var(--white), transparent);
+        }
+
+        .fimg img {
+            object-position: 70% 40%;
+        }
+
+        .ffs {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--red) 50%, var(--yellow) 50%);
+        }
+
+        .fbody {
+            padding: 20px;
+        }
+
+        .fn {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .fn-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 18px;
+            margin-top: 2px;
+        }
+
+        .fr {
+            font-size: 11px;
+            color: var(--saffron);
+            letter-spacing: .06em;
+            margin-top: 4px;
+            font-weight: 700;
+        }
+
+        .ftags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 12px;
+        }
+
+        .ftag {
+            background: rgba(201, 144, 12, .1);
+            border: 1px solid rgba(201, 144, 12, .22);
+            color: var(--mid);
+            font-size: 11px;
+            padding: 2px 9px;
+            border-radius: 20px;
+        }
+
+        .fq {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 22px;
+            font-style: italic;
+            color: var(--maroon);
+            line-height: 1.5;
+            margin-bottom: 22px;
+            padding-left: 18px;
+            border-left: 3px solid var(--gold);
+        }
+
+        .fb {
+            font-size: 15px;
+            color: var(--mid);
+            line-height: 1.9;
+            margin-bottom: 13px;
+        }
+
+        .fb-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 14px;
+        }
+
+        /* ── TESTIMONIALS ── */
+        #testi {
+            background: linear-gradient(170deg, #100100 0%, #2D0808 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tg {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .tc {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(201, 144, 12, .18);
+            border-radius: 10px;
+            padding: 24px;
+            transition: all .3s;
+        }
+
+        .tc:hover {
+            background: rgba(255, 255, 255, .07);
+            border-color: rgba(201, 144, 12, .38);
+            transform: translateY(-3px);
+        }
+
+        .ts {
+            color: var(--gold);
+            font-size: 12px;
+            margin-bottom: 12px;
+            letter-spacing: 3px;
+        }
+
+        .tt {
+            color: rgba(255, 255, 255, .8);
+            font-size: 14px;
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .tt-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 13px;
+        }
+
+        .ta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tav {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, var(--gold), var(--saffron));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+
+        .tn {
+            color: var(--gold-l);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .tit {
+            color: rgba(255, 255, 255, .46);
+            font-size: 11px;
+        }
+
+        /* ── CSR ── */
+        #csr {
+            background: var(--white);
+            border-top: 1px solid rgba(201, 144, 12, .18);
+        }
+
+        .cg {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 68px;
+            align-items: center;
+        }
+
+        .cert-r {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            background: #FBF5E6;
+            border: 1px solid rgba(201, 144, 12, .18);
+            border-radius: 7px;
+            padding: 13px 16px;
+            margin-bottom: 12px;
+        }
+
+        .ci {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .cn {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        .cn-kn {
+            font-family: "Noto Serif Kannada", serif;
+            font-size: 13px;
+        }
+
+        .cd {
+            font-size: 12px;
+            color: var(--mid);
+        }
+
+        .cbig {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 68px;
+            font-weight: 300;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+
+        .cbl {
+            list-style: none;
+        }
+
+        .cbl li {
+            display: flex;
+            gap: 9px;
+            align-items: flex-start;
+            padding: 9px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, .06);
+            font-size: 14px;
+            color: var(--mid);
+            line-height: 1.5;
+        }
+
+        .cbl li::before {
+            content: "✦";
+            color: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        /* ── CONTACT ── */
+        #contact {
+            background: var(--cream);
+        }
+
+        .cog {
+            display: grid;
+            grid-template-columns:1fr 1.2fr;
+            gap: 68px;
+        }
+
+        .cod {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+
+        .coico {
+            font-size: 17px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .cov {
+            font-size: 14px;
+            color: var(--mid);
+            line-height: 1.6;
+        }
+
+        .cov strong {
+            color: var(--text);
+            display: block;
+            margin-bottom: 1px;
+        }
+
+        .fg2 {
+            margin-bottom: 13px;
+        }
+
+        .fg2 label {
+            display: block;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: var(--mid);
+            margin-bottom: 4px;
+        }
+
+        .fg2 input, .fg2 select, .fg2 textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 1px solid rgba(0, 0, 0, .15);
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: "Libre Baskerville", serif;
+            background: var(--white);
+            color: var(--text);
+            outline: none;
+            transition: border .2s;
+        }
+
+        .fg2 input:focus, .fg2 select:focus, .fg2 textarea:focus {
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 144, 12, .12);
+        }
+
+        .fg2 textarea {
+            resize: vertical;
+            min-height: 88px;
+        }
+
+        .fr2 {
+            display: grid;
+            grid-template-columns:1fr 1fr;
+            gap: 12px;
+            margin-bottom: 0;
+        }
+
+        .fsr {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 4px;
+        }
+
+        .fnote {
+            font-size: 12px;
+            color: var(--mid);
+        }
+
+        #f-success {
+            display: none;
+            background: #E8F5E9;
+            border: 1px solid #4CAF50;
+            color: #2E7D32;
+            padding: 11px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 13px;
+        }
+
+        #f-error {
+            display: none;
+            background: #FFEBEE;
+            border: 1px solid #EF5350;
+            color: #C62828;
+            padding: 11px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-top: 13px;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--deep);
+            padding: 52px 40px 26px;
+        }
+
+        .fi {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .ftop {
+            display: grid;
+            grid-template-columns:2fr 1fr 1fr 1fr;
+            gap: 36px;
+            margin-bottom: 40px;
+        }
+
+        .fname {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 19px;
+            color: var(--gold-l);
+            margin-bottom: 9px;
+        }
+
+        .ftag2 {
+            font-size: 13px;
+            color: rgba(255, 255, 255, .48);
+            line-height: 1.7;
+        }
+
+        .fcol h4 {
+            font-size: 11px;
+            letter-spacing: .15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 13px;
+        }
+
+        .fcol ul {
+            list-style: none;
+        }
+
+        .fcol ul li {
+            margin-bottom: 8px;
+        }
+
+        .fcol ul li a {
+            color: rgba(255, 255, 255, .5);
+            font-size: 13px;
+            text-decoration: none;
+            transition: color .2s;
+        }
+
+        .fcol ul li a:hover {
+            color: var(--gold-l);
+        }
+
+        .fbot {
+            border-top: 1px solid rgba(255, 255, 255, .07);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .fcopy {
+            font-size: 12px;
+            color: rgba(255, 255, 255, .28);
+        }
+
+        /* ── REVEAL ── */
+        .rv {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .65s, transform .65s;
+        }
+
+        .rv.on {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* ── LANG ── */
+        .kn {
+            display: none;
+        }
+
+        body.lkn .en {
+            display: none;
+        }
+
+        body.lkn .kn {
+            display: block;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 960px) {
+            .hcontent {
+                grid-template-columns:1fr;
+            }
+
+            .hport {
+                display: none;
+            }
+
+            .ag, .fg, .cg, .cog {
+                grid-template-columns:1fr;
+                gap: 36px;
+            }
+
+            .sg {
+                grid-template-columns:repeat(3, 1fr);
+            }
+
+            .pg {
+                grid-template-columns:1fr 1fr;
+            }
+
+            .tg {
+                grid-template-columns:1fr;
+            }
+
+            .ftop {
+                grid-template-columns:1fr 1fr;
+            }
+
+            nav {
+                padding: 9px 18px;
+            }
+
+            .nr {
+                display: none;
+            }
+
+            section {
+                padding: 56px 20px;
+            }
+
+            .hkn {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .pg {
+                grid-template-columns:1fr;
+            }
+
+            .sg {
+                grid-template-columns:1fr 1fr;
+            }
+
+            .fr2 {
+                grid-template-columns:1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mn">
+    <div class="nl">
+        <div class="ne">
+            <img id="navImg" src="images/kuvempu.jpg" alt="Kuvempu">
+        </div>
+        <div class="ntb">
+            <div class="nkn">ಅಖಿಲ ಕರ್ನಾಟಕ ಕುವೆಂಪು ಸಾಂಸ್ಕೃತಿಕ ವೇದಿಕೆ (ರಿ.)</div>
+            <div class="nen en">Akhila Karnataka Kuvempu Samskrutika Vedike (R)</div>
+            <div class="nsub en">Vijayanagar, Bengaluru · Est. 2011 · 80G · CSR Eligible</div>
+        </div>
+    </div>
+    <div class="nr">
+        <a href="#about"><span class="en">About</span><span class="kn" style="font-family:'Noto Serif Kannada',serif;">ಬಗ್ಗೆ</span></a>
+        <a href="#programs"><span class="en">Programs</span><span class="kn"
+                                                                  style="font-family:'Noto Serif Kannada',serif;">ಕಾರ್ಯಕ್ರಮ</span></a>
+        <a href="#founder"><span class="en">Founder</span><span class="kn"
+                                                                style="font-family:'Noto Serif Kannada',serif;">ಸಂಸ್ಥಾಪಕ</span></a>
+        <a href="#csr">CSR &amp; Donate</a>
+        <a href="#contact"><span class="en">Contact</span><span class="kn"
+                                                                style="font-family:'Noto Serif Kannada',serif;">ಸಂಪರ್ಕ</span></a>
+        <button class="ncta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+            <span class="en">Support Us</span><span class="kn"
+                                                    style="font-family:'Noto Serif Kannada',serif;">ಬೆಂಬಲಿಸಿ</span>
+        </button>
+        <!-- Language switcher -->
+        <div class="lang-switch">
+            <button class="lbtn on" onclick="setLang('en')">English</button>
+            <button class="lbtn" onclick="setLang('kn')">ಕನ್ನಡ</button>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hbg"></div>
+    <div class="hpat"></div>
+    <div class="hglow"></div>
+    <div class="hbar"></div>
+    <div class="hcontent">
+        <div class="rv">
+            <div class="hkn">ಅಖಿಲ ಕರ್ನಾಟಕ ಕುವೆಂಪು ಸಾಂಸ್ಕೃತಿಕ ವೇದಿಕೆ (ರಿ.)</div>
+            <div class="hen">Akhila Karnataka Kuvempu Samskrutika Vedike (R)</div>
+            <div class="hbadge">
+                <span class="en">RECOGNISED BY GOVT. OF KARNATAKA · SINCE 2011</span>
+                <span class="kn"
+                      style="font-family:'Noto Serif Kannada',serif;">ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಮಾನ್ಯತೆ · ೨೦೧೧ ರಿಂದ</span>
+            </div>
+            <div class="hsub en">Inspired by National Poet Kuvempu's vision of universal humanity — preserving Kannada
+                language, literature and culture through literary excellence and social service.
+            </div>
+            <div class="hsub hsub-kn kn" style="font-family:'Noto Serif Kannada',serif;">ರಾಷ್ಟ್ರಕವಿ ಕುವೆಂಪು ಅವರ
+                ವಿಶ್ವಮಾನವ ಸಂದೇಶದಿಂದ ಪ್ರೇರಿತರಾಗಿ ಕನ್ನಡ ಭಾಷೆ, ಸಾಹಿತ್ಯ ಮತ್ತು ಸಂಸ್ಕೃತಿಯ ಸಂರಕ್ಷಣೆಗಾಗಿ ನಿರಂತರ ಶ್ರಮ.
+            </div>
+            <div class="hcerts">
+                <div class="ctag"><span class="dot"></span>Regn. 447/2011-12</div>
+                <div class="ctag"><span class="dot"></span>80G Certified</div>
+                <div class="ctag"><span class="dot"></span>CSR Eligible</div>
+                <div class="ctag"><span class="dot"></span><span class="en">Govt. Recognised</span><span class="kn"
+                                                                                                         style="font-family:'Noto Serif Kannada',serif;">ಸರ್ಕಾರ ಮಾನ್ಯ</span>
+                </div>
+            </div>
+            <div class="hbtns">
+                <a href="#csr" class="btn1"><span class="en">CSR / Donate</span><span class="kn"
+                                                                                      style="font-family:'Noto Serif Kannada',serif;">ದೇಣಿಗೆ ನೀಡಿ</span></a>
+                <a href="#about" class="btn2"><span class="en">Our Story</span><span class="kn"
+                                                                                     style="font-family:'Noto Serif Kannada',serif;">ನಮ್ಮ ಬಗ್ಗೆ</span></a>
+            </div>
+        </div>
+        <div class="hport rv" style="animation-delay:.2s">
+            <div class="port-ring">
+                <div class="port-img">
+                    <img id="founderImg" src="images/kuvempu.jpg" alt="Kuvempu">
+                </div> <!-- FIX 1: closed div -->
+                <!-- FIX 2: badges moved outside .port-img but inside .port-ring -->
+                <div class="pip p1">
+                    <div class="pip-n">14+</div>
+                    <div class="pip-l en">Years</div>
+                    <div class="pip-l kn" style="font-family:'Noto Serif Kannada',serif;">ವರ್ಷ</div>
+                </div>
+                <div class="pip p2">
+                    <div class="pip-n">500+</div>
+                    <div class="pip-l en">Events</div>
+                    <div class="pip-l kn" style="font-family:'Noto Serif Kannada',serif;">ಕಾರ್ಯ</div>
+                </div>
+                <div class="pip p3">
+                    <div class="pip-n">80G</div>
+                    <div class="pip-l">Cert.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="si">
+        <div class="ag">
+            <div class="rv">
+                <div class="slbl en">WHO WE ARE</div>
+                <div class="slbl kn" style="font-family:'Noto Serif Kannada',serif;">ನಮ್ಮ ಬಗ್ಗೆ</div>
+                <h2 class="sh2 en">A Decade of <em>Cultural Service</em> to Karnataka</h2>
+                <h2 class="sh2 sh2-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಕರ್ನಾಟಕಕ್ಕೆ ಒಂದು ದಶಕದ
+                    ಸಾಂಸ್ಕೃತಿಕ ಸೇವೆ</h2>
+                <blockquote class="apull en">"Inspired by Kuvempu's vision of universal humanity, we work tirelessly to
+                    keep Kannada language and culture alive for future generations."
+                </blockquote>
+                <blockquote class="apull kn" style="font-family:'Noto Serif Kannada',serif;font-size:17px;">"ಕುವೆಂಪು ಅವರ
+                    ವಿಶ್ವಮಾನವ ಸಂದೇಶದಿಂದ ಪ್ರೇರಿತರಾಗಿ ಕನ್ನಡ ಭಾಷೆ ಮತ್ತು ಸಂಸ್ಕೃತಿಯನ್ನು ಮುಂದಿನ ಪೀಳಿಗೆಗೆ ಉಳಿಸಲು ಅವಿರತ
+                    ಶ್ರಮಿಸುತ್ತೇವೆ."
+                </blockquote>
+                <p class="ab en">Established in 2011, inspired by National Poet Kuvempu who brought Karnataka's first
+                    Jnanpith Award. Headquarters: No. 832, 1st Floor, 4th Main Road, Vijayanagar, Bengaluru – 560 040.
+                    District and taluk branches operate across Karnataka.</p>
+                <p class="ab ab-kn kn" style="font-family:'Noto Serif Kannada',serif;">೨೦೧೧ ರಲ್ಲಿ ಸ್ಥಾಪಿತ. ಕೇಂದ್ರ ಕಚೇರಿ:
+                    ನಂ. ೮೩೨, ೧ನೇ ಮಹಡಿ, ೪ನೇ ಮುಖ್ಯರಸ್ತೆ, ವಿಜಯನಗರ, ಬೆಂಗಳೂರು – ೫೬೦ ೦೪೦. ರಾಜ್ಯದ ವಿವಿಧ ಭಾಗಗಳಲ್ಲಿ ಜಿಲ್ಲಾ ಮತ್ತು
+                    ತಾಲೂಕು ಶಾಖೆಗಳು ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿವೆ.</p>
+                <p class="ab en">Under this platform, the 'Jeevanmuki' Kannada fortnightly magazine (15+ years), book
+                    publishing house and trust actively serve society — voicing people's concerns and celebrating
+                    Karnataka's literary tradition.</p>
+                <p class="ab ab-kn kn" style="font-family:'Noto Serif Kannada',serif;">'ಜೀವನ್ಮುಖಿ' ಪಾಕ್ಷಿಕ ಪತ್ರಿಕೆ (೧೫+
+                    ವರ್ಷ), ಪುಸ್ತಕ ಪ್ರಕಾಶನ ಮತ್ತು ಟ್ರಸ್ಟ್ ಸಮಾಜ ಸೇವೆಯಲ್ಲಿ ಸಕ್ರಿಯ.</p>
+            </div>
+            <div class="rv" style="animation-delay:.2s">
+                <div class="tl">
+                    <div class="tli">
+                        <div class="tld"></div>
+                        <div class="tly">2011</div>
+                        <div class="tlt en">Foundation &amp; Magazine Launch</div>
+                        <div class="tlt tlt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಸ್ಥಾಪನೆ ಮತ್ತು ಪತ್ರಿಕೆ
+                            ಆರಂಭ
+                        </div>
+                        <div class="tlb en">Established in Bengaluru, Regn. 447/2011-12. Launched 'Jeevanmuki'
+                            fortnightly from Gandhi Bhavan, Mandya. Recognised by Govt. of Karnataka.
+                        </div>
+                        <div class="tlb tlb-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಬೆಂಗಳೂರಿನಲ್ಲಿ
+                            ಸ್ಥಾಪಿತ. 'ಜೀವನ್ಮುಖಿ' ಪತ್ರಿಕೆ ಮಂಡ್ಯ ಗಾಂಧಿ ಭವನದಿಂದ ಆರಂಭ.
+                        </div>
+                    </div>
+                    <div class="tli">
+                        <div class="tld"></div>
+                        <div class="tly">2012–2015</div>
+                        <div class="tlt en">State-wide Expansion</div>
+                        <div class="tlt tlt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ರಾಜ್ಯವ್ಯಾಪ್ತಿ
+                            ವಿಸ್ತರಣೆ
+                        </div>
+                        <div class="tlb en">District and taluk branches established. Annual Kannada Nudi Sammelana
+                            inaugurated. Literary awards program begun.
+                        </div>
+                        <div class="tlb tlb-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಜಿಲ್ಲಾ ಮತ್ತು ತಾಲೂಕು
+                            ಶಾಖೆ ಸ್ಥಾಪನೆ. ಕನ್ನಡ ನುಡಿ ಸಮ್ಮೇಳನ ಆರಂಭ.
+                        </div>
+                    </div>
+                    <div class="tli">
+                        <div class="tld"></div>
+                        <div class="tly">2016–2019</div>
+                        <div class="tlt en">80G &amp; CSR Recognition</div>
+                        <div class="tlt tlt-kn kn" style="font-family:'Noto Serif Kannada',serif;">80G ಮತ್ತು ಸಿಎಸ್ಆರ್
+                            ಮಾನ್ಯತೆ
+                        </div>
+                        <div class="tlb en">80G certification received. Endorsed by Jnanpith awardees. CSR partnerships
+                            launched. Education and welfare programs expanded state-wide.
+                        </div>
+                        <div class="tlb tlb-kn kn" style="font-family:'Noto Serif Kannada',serif;">80G ಪ್ರಮಾಣಪತ್ರ ಲಭ್ಯ.
+                            ಸಿಎಸ್ಆರ್ ಪಾಲುದಾರಿಕೆ ಆರಂಭ.
+                        </div>
+                    </div>
+                    <div class="tli">
+                        <div class="tld"></div>
+                        <div class="tly">2021 – Present</div>
+                        <div class="tlt en">Dashamaanotsava &amp; Beyond</div>
+                        <div class="tlt tlt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ದಶಮಾನೋತ್ಸವ ಮತ್ತು
+                            ಮುಂದೆ
+                        </div>
+                        <div class="tlb en">Celebrated 10 years. Jeevanmuki magazine completes 15 years of uninterrupted
+                            publication. Expanding education, environmental and healthcare programs.
+                        </div>
+                        <div class="tlb tlb-kn kn" style="font-family:'Noto Serif Kannada',serif;">ದಶಮಾನೋತ್ಸವ ಸಂಪನ್ನ.
+                            ಜೀವನ್ಮುಖಿ ಪತ್ರಿಕೆ ೧೫ ವರ್ಷ ಪೂರ್ಣ.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+    <div class="si">
+        <div class="sg">
+            <div class="sc rv">
+                <div class="sn">14<span class="ss">+</span></div>
+                <div class="sl en">Years of Service</div>
+                <div class="sl sl-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಸೇವೆಯ ವರ್ಷಗಳು</div>
+            </div>
+            <div class="sc rv" style="animation-delay:.1s">
+                <div class="sn">500<span class="ss">+</span></div>
+                <div class="sl en">Events Organized</div>
+                <div class="sl sl-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಕಾರ್ಯಕ್ರಮಗಳು</div>
+            </div>
+            <div class="sc rv" style="animation-delay:.2s">
+                <div class="sn">50K<span class="ss">+</span></div>
+                <div class="sl en">Lives Touched</div>
+                <div class="sl sl-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಜನರ ಜೀವನ</div>
+            </div>
+            <div class="sc rv" style="animation-delay:.3s">
+                <div class="sn">100<span class="ss">+</span></div>
+                <div class="sl en">Publications</div>
+                <div class="sl sl-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಪ್ರಕಾಶನಗಳು</div>
+            </div>
+            <div class="sc rv" style="animation-delay:.4s">
+                <div class="sn">25<span class="ss">+</span></div>
+                <div class="sl en">District Branches</div>
+                <div class="sl sl-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಜಿಲ್ಲಾ ಶಾಖೆಗಳು</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs">
+    <div class="si">
+        <div class="rv" style="text-align:center;margin-bottom:44px;">
+            <div class="slbl en">WHAT WE DO</div>
+            <div class="slbl kn" style="font-family:'Noto Serif Kannada',serif;">ನಮ್ಮ ಕಾರ್ಯಕ್ರಮಗಳು</div>
+            <h2 class="sh2 en">Six Pillars of <em>Our Work</em></h2>
+            <h2 class="sh2 sh2-kn kn" style="font-family:'Noto Serif Kannada',serif;">ನಮ್ಮ ಕಾರ್ಯದ ಆರು ಸ್ತಂಭಗಳು</h2>
+        </div>
+        <div class="pg">
+            <div class="pc rv">
+                <div class="pi">📜</div>
+                <div class="pt en">Kannada Nudi Sammelana</div>
+                <div class="pt pt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಕನ್ನಡ ನುಡಿ ಸಮ್ಮೇಳನ</div>
+                <p class="pd en">Annual state-level literary conference bringing together poets, authors, scholars and
+                    Kannada advocates for grand celebrations of language and culture.</p>
+                <p class="pd pd-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಕವಿಗಳು, ಲೇಖಕರು, ವಿದ್ವಾಂಸರು
+                    ಒಟ್ಟುಗೂಡುವ ವಾರ್ಷಿಕ ರಾಜ್ಯ ಮಟ್ಟದ ಸಾಹಿತ್ಯ ಸಮ್ಮೇಳನ.</p></div>
+            <div class="pc rv" style="animation-delay:.1s">
+                <div class="pi">🏆</div>
+                <div class="pt en">Jeevanmuki Awards</div>
+                <div class="pt pt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಜೀವನ್ಮುಖಿ ಪ್ರಶಸ್ತಿ</div>
+                <p class="pd en">Annual recognition of achievers across literature, social service, journalism and
+                    public life — endorsed by Jnanpith awardees and retired judges.</p>
+                <p class="pd pd-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಸಾಹಿತ್ಯ, ಸಮಾಜ ಸೇವೆ, ಪತ್ರಿಕೋದ್ಯಮ
+                    ಕ್ಷೇತ್ರದ ಗಣ್ಯ ಸಾಧಕರಿಗೆ ವಾರ್ಷಿಕ ಪ್ರಶಸ್ತಿ.</p></div>
+            <div class="pc rv" style="animation-delay:.2s">
+                <div class="pi">🎓</div>
+                <div class="pt en">Education Support</div>
+                <div class="pt pt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಶಿಕ್ಷಣ ಸಹಾಯ</div>
+                <p class="pd en">Free notebooks, stationery and uniforms to government school students. Scholarships for
+                    bright students from underprivileged backgrounds.</p>
+                <p class="pd pd-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಸರ್ಕಾರಿ ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಉಚಿತ
+                    ನೋಟ್ ಬುಕ್, ಸಮವಸ್ತ್ರ ಮತ್ತು ವಿದ್ಯಾರ್ಥಿ ವೇತನ.</p></div>
+            <div class="pc rv">
+                <div class="pi">🤝</div>
+                <div class="pt en">Social Welfare</div>
+                <div class="pt pt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಸಾಮಾಜಿಕ ಸೇವೆ</div>
+                <p class="pd en">Medical assistance for poor and disabled patients, community meals, youth competitions
+                    and advocacy for marginalized communities across Karnataka.</p>
+                <p class="pd pd-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಅಶಕ್ತ ಬಡರೋಗಿಗಳಿಗೆ ವೈದ್ಯಕೀಯ ಸಹಾಯ
+                    ಮತ್ತು ಸಮಾಜ ಸೇವಾ ಕಾರ್ಯಕ್ರಮ.</p></div>
+            <div class="pc rv" style="animation-delay:.1s">
+                <div class="pi">📚</div>
+                <div class="pt en">Publications &amp; Magazine</div>
+                <div class="pt pt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಪ್ರಕಾಶನ ಮತ್ತು ಪತ್ರಿಕೆ</div>
+                <p class="pd en">'Jeevanmuki' fortnightly Kannada magazine (15+ years), book publishing, poetry
+                    workshops, kavigoshti and training programs for young writers.</p>
+                <p class="pd pd-kn kn" style="font-family:'Noto Serif Kannada',serif;">'ಜೀವನ್ಮುಖಿ' ಪಾಕ್ಷಿಕ ಪತ್ರಿಕೆ,
+                    ಪುಸ್ತಕ ಪ್ರಕಾಶನ ಮತ್ತು ಯುವ ಬರಹಗಾರರ ತರಬೇತಿ.</p></div>
+            <div class="pc rv" style="animation-delay:.2s">
+                <div class="pi">🌿</div>
+                <div class="pt en">Environment Conservation</div>
+                <div class="pt pt-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಪರಿಸರ ಸಂರಕ್ಷಣೆ</div>
+                <p class="pd en">Tree plantation drives, environmental awareness campaigns and active participation in
+                    Karnataka's green conservation initiatives across all districts.</p>
+                <p class="pd pd-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಗಿಡ ನೆಡುವ ಕಾರ್ಯಕ್ರಮ ಮತ್ತು ಪರಿಸರ
+                    ಜಾಗೃತಿ ಚಟುವಟಿಕೆಗಳು.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+    <div class="si">
+        <div class="fg">
+            <div class="rv">
+                <div class="fcard">
+                    <div class="ffs"></div>
+                    <div class="fimg">
+                        <img id="founderImg" src="images/Jeevanmuki-Suresh.jpg" alt="Jeevanmuki Suresh">
+                        <div class="fimg-ov"></div>
+                    </div>
+                    <div class="fbody">
+                        <div class="fn en">Jeevanmuki Suresh</div>
+                        <div class="fn fn-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಜೀವನ್ಮುಖಿ ಸುರೇಶ್</div>
+                        <div class="fr en">FOUNDER &amp; PRESIDENT · AKHILA KARNATAKA KUVEMPU SAMSKRUTIKA VEDIKE</div>
+                        <div class="fr kn" style="font-family:'Noto Serif Kannada',serif;">ಸಂಸ್ಥಾಪಕ ಅಧ್ಯಕ್ಷರು · ಅಖಿಲ
+                            ಕರ್ನಾಟಕ ಕುವೆಂಪು ಸಾಂಸ್ಕೃತಿಕ ವೇದಿಕೆ
+                        </div>
+                        <div class="ftags">
+                            <span class="ftag en">Literary Activist</span><span class="ftag kn"
+                                                                                style="font-family:'Noto Serif Kannada',serif;">ಸಾಹಿತ್ಯ ಕಾರ್ಯಕರ್ತ</span>
+                            <span class="ftag en">Social Reformer</span><span class="ftag kn"
+                                                                              style="font-family:'Noto Serif Kannada',serif;">ಸಮಾಜ ಸೇವಕ</span>
+                            <span class="ftag en">Editor, Jeevanmuki</span><span class="ftag kn"
+                                                                                 style="font-family:'Noto Serif Kannada',serif;">ಸಂಪಾದಕ, ಜೀವನ್ಮುಖಿ</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rv" style="animation-delay:.2s">
+                <div class="slbl en">OUR FOUNDER</div>
+                <div class="slbl kn" style="font-family:'Noto Serif Kannada',serif;">ನಮ್ಮ ಸಂಸ್ಥಾಪಕ</div>
+                <h2 class="sh2 en">The Vision Behind <em>The Vedike</em></h2>
+                <h2 class="sh2 sh2-kn kn" style="font-family:'Noto Serif Kannada',serif;">ವೇದಿಕೆಯ ಹಿಂದಿನ
+                    ದೂರದರ್ಶಿತ್ವ</h2>
+                <blockquote class="fq en">"Kannada is not just a language — it is the heartbeat of our civilization,
+                    deserving to be celebrated, preserved and handed to the next generation with pride."
+                </blockquote>
+                <blockquote class="fq kn" style="font-family:'Noto Serif Kannada',serif;font-size:16px;">"ಕನ್ನಡ ಕೇವಲ
+                    ಭಾಷೆ ಮಾತ್ರವಲ್ಲ — ಅದು ನಮ್ಮ ನಾಗರೀಕತೆಯ ಬಡಿತ, ಮುಂದಿನ ಪೀಳಿಗೆಗೆ ಹೆಮ್ಮೆಯಿಂದ ನೀಡಬೇಕಾದ ಅಮೂಲ್ಯ ಸಂಪತ್ತು."
+                </blockquote>
+                <p class="fb en">Jeevanmuki Suresh founded the Vedike in 2011 with an unwavering commitment to literary,
+                    cultural and social service. He has built an organization spanning the entire state with district
+                    branches, organises 50+ events annually and has earned endorsement from Karnataka's most celebrated
+                    figures — including Jnanpith awardee Dr. Chandrasekhara Kambara, Justice A.J. Sadashiva and Nadoja
+                    scholars.</p>
+                <p class="fb fb-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಜೀವನ್ಮುಖಿ ಸುರೇಶ್ ಅವರು ೨೦೧೧ ರಲ್ಲಿ
+                    ಸಾಹಿತ್ಯ, ಸಾಂಸ್ಕೃತಿಕ ಮತ್ತು ಸಾಮಾಜಿಕ ಸೇವೆಯ ದೃಢ ಸಂಕಲ್ಪದೊಂದಿಗೆ ವೇದಿಕೆ ಸ್ಥಾಪಿಸಿದರು. ಜ್ಞಾನಪೀಠ ಪ್ರಶಸ್ತಿ
+                    ಪುರಸ್ಕೃತ ಡಾ. ಚಂದ್ರಶೇಖರ ಕಂಬಾರ, ನ್ಯಾ. ಎ.ಜೆ. ಸದಾಶಿವ ಮತ್ತು ನಾಡೋಜ ವಿದ್ವಾಂಸರ ಮೆಚ್ಚುಗೆ ಗಳಿಸಿದ್ದಾರೆ.</p>
+                <p class="fb en">His magazine 'Jeevanmuki' — started in 2010 from Gandhi Bhavan, Mandya — has completed
+                    15 remarkable years of uninterrupted publication. Famous writers, Kannada fighters, IAS/IPS
+                    officers, legislators and university chancellors have participated in Vedike programs and praised
+                    this extraordinary work.</p>
+                <p class="fb fb-kn kn" style="font-family:'Noto Serif Kannada',serif;">'ಜೀವನ್ಮುಖಿ' ಪತ್ರಿಕೆ ೨೦೧೦ ರಿಂದ ೧೫
+                    ವರ್ಷಗಳ ನಿರಂತರ ಪ್ರಕಟಣೆ ಸಾಧಿಸಿದೆ. ಖ್ಯಾತ ಸಾಹಿತಿಗಳು, ಐಎಎಸ್/ಐಪಿಎಸ್ ಅಧಿಕಾರಿಗಳು ಮತ್ತು ಶಾಸಕರು
+                    ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಭಾಗವಹಿಸಿ ಮೆಚ್ಚುಗೆ ವ್ಯಕ್ತಪಡಿಸಿದ್ದಾರೆ.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testi">
+    <div class="si">
+        <div class="rv" style="text-align:center;margin-bottom:44px;">
+            <div class="slbl" style="color:var(--gold);">WHAT EMINENT PERSONALITIES SAY</div>
+            <h2 class="sh2 en" style="color:#fff;">Endorsed by <em>Karnataka's Finest</em></h2>
+            <h2 class="sh2 sh2-kn kn" style="color:#fff;font-family:'Noto Serif Kannada',serif;">ಕರ್ನಾಟಕದ ಶ್ರೇಷ್ಠರ
+                ಅನುಮೋದನೆ</h2>
+        </div>
+        <div class="tg">
+            <div class="tc rv">
+                <div class="ts">★★★★★</div>
+                <p class="tt en">"The Kuvempu Vedike is doing exceptional work in keeping the literary flame of
+                    Karnataka alive. Their dedication to Kannada culture is unmatched."</p>
+                <p class="tt tt-kn kn" style="font-family:'Noto Serif Kannada',serif;">"ಕುವೆಂಪು ವೇದಿಕೆ ಕರ್ನಾಟಕದ ಸಾಹಿತ್ಯ
+                    ಜ್ಯೋತಿಯನ್ನು ಜೀವಂತವಾಗಿಡುವಲ್ಲಿ ಅಸಾಧಾರಣ ಕೆಲಸ ಮಾಡುತ್ತಿದೆ."</p>
+                <div class="ta">
+                    <div class="tav">📖</div>
+                    <div>
+                        <div class="tn">Dr. Chandrasekhara Kambara</div>
+                        <div class="tit en">Jnanpith Awardee · Playwright &amp; Poet</div>
+                        <div class="tit kn" style="font-family:'Noto Serif Kannada',serif;">ಜ್ಞಾನಪೀಠ ಪ್ರಶಸ್ತಿ ಪುರಸ್ಕೃತ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tc rv" style="animation-delay:.15s">
+                <div class="ts">★★★★★</div>
+                <p class="tt en">"Justice demands we recognise those who work at the grassroots to preserve our culture.
+                    This Vedike exemplifies that spirit magnificently."</p>
+                <p class="tt tt-kn kn" style="font-family:'Noto Serif Kannada',serif;">"ಸಂಸ್ಕೃತಿ ಸಂರಕ್ಷಣೆಗೆ
+                    ನಿಸ್ವಾರ್ಥವಾಗಿ ಶ್ರಮಿಸುವ ಈ ವೇದಿಕೆಯ ಕಾರ್ಯ ಅನನ್ಯ ಮತ್ತು ಅನುಕರಣೀಯ."</p>
+                <div class="ta">
+                    <div class="tav">⚖️</div>
+                    <div>
+                        <div class="tn">Justice A.J. Sadashiva</div>
+                        <div class="tit en">Retd. Judge, Supreme &amp; High Court</div>
+                        <div class="tit kn" style="font-family:'Noto Serif Kannada',serif;">ನಿವೃತ್ತ ನ್ಯಾಯಾಧೀಶರು</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tc rv" style="animation-delay:.3s">
+                <div class="ts">★★★★★</div>
+                <p class="tt en">"Organizations like the Kuvempu Vedike are the backbone of Kannada's cultural survival.
+                    Their work nurturing emerging writers is truly praiseworthy."</p>
+                <p class="tt tt-kn kn" style="font-family:'Noto Serif Kannada',serif;">"ಕನ್ನಡದ ಸಾಂಸ್ಕೃತಿಕ ಉಳಿವಿನ
+                    ಬೆನ್ನೆಲುಬಾಗಿ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತಿರುವ ಈ ಸಂಸ್ಥೆ ಮಾದರಿ."</p>
+                <div class="ta">
+                    <div class="tav">🖊️</div>
+                    <div>
+                        <div class="tn">Dr. K.S. Nisar Ahmed</div>
+                        <div class="tit en">Nadoja · Poet &amp; Scholar</div>
+                        <div class="tit kn" style="font-family:'Noto Serif Kannada',serif;">ನಾಡೋಜ · ಕವಿ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tc rv">
+                <div class="ts">★★★★★</div>
+                <p class="tt en">"The work of Kuvempu Vedike in connecting literature to society and nurturing Kannada
+                    writers is a model for all cultural organisations."</p>
+                <p class="tt tt-kn kn" style="font-family:'Noto Serif Kannada',serif;">"ಸಾಹಿತ್ಯವನ್ನು ಸಮಾಜಕ್ಕೆ ಸಂಪರ್ಕಿಸುವ
+                    ಈ ವೇದಿಕೆಯ ಕೆಲಸ ನಿಜಕ್ಕೂ ಪ್ರಶಂಸನೀಯ."</p>
+                <div class="ta">
+                    <div class="tav">🎭</div>
+                    <div>
+                        <div class="tn">Dr. Baraguru Ramachandrappa</div>
+                        <div class="tit en">Nadoja · Author &amp; Activist</div>
+                        <div class="tit kn" style="font-family:'Noto Serif Kannada',serif;">ನಾಡೋಜ · ಲೇಖಕ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tc rv" style="animation-delay:.15s">
+                <div class="ts">★★★★★</div>
+                <p class="tt en">"I have personally witnessed the impact of this organisation on communities across
+                    Karnataka. Their social service work is genuine and far-reaching."</p>
+                <p class="tt tt-kn kn" style="font-family:'Noto Serif Kannada',serif;">"ಕರ್ನಾಟಕದ ಸಮುದಾಯಗಳ ಮೇಲೆ ಈ ಸಂಸ್ಥೆಯ
+                    ಪ್ರಭಾವವನ್ನು ನಾನು ನೇರವಾಗಿ ಕಂಡಿದ್ದೇನೆ."</p>
+                <div class="ta">
+                    <div class="tav">🏛️</div>
+                    <div>
+                        <div class="tn">T. Thimmegowda (IAS Retd.)</div>
+                        <div class="tit en">Former IAS Officer, Karnataka</div>
+                        <div class="tit kn" style="font-family:'Noto Serif Kannada',serif;">ನಿವೃತ್ತ ಐಎಎಸ್ ಅಧಿಕಾರಿ</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tc rv" style="animation-delay:.3s">
+                <div class="ts">★★★★★</div>
+                <p class="tt en">"This Vedike is not just an organisation — it is a movement that keeps Kannada's
+                    intellectual and cultural spirit alive with remarkable energy."</p>
+                <p class="tt tt-kn kn" style="font-family:'Noto Serif Kannada',serif;">"ಈ ವೇದಿಕೆ ಕೇವಲ ಸಂಸ್ಥೆಯಲ್ಲ, ಕನ್ನಡದ
+                    ಬೌದ್ಧಿಕ ಚೇತನ ಉಳಿಸುವ ಚಳವಳಿ."</p>
+                <div class="ta">
+                    <div class="tav">🌟</div>
+                    <div>
+                        <div class="tn">Prof. Champa</div>
+                        <div class="tit en">Eminent Scholar &amp; Critic</div>
+                        <div class="tit kn" style="font-family:'Noto Serif Kannada',serif;">ಪ್ರಖ್ಯಾತ ವಿದ್ವಾಂಸರು</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CSR -->
+<section id="csr">
+    <div class="si">
+        <div class="cg">
+            <div class="rv">
+                <div class="slbl">CSR &amp; DONATIONS</div>
+                <h2 class="sh2 en">Partner With Us to <em>Build Karnataka's Future</em></h2>
+                <h2 class="sh2 sh2-kn kn" style="font-family:'Noto Serif Kannada',serif;">ಕರ್ನಾಟಕದ ಭವಿಷ್ಯ ನಿರ್ಮಾಣದಲ್ಲಿ
+                    ಪಾಲ್ಗೊಳ್ಳಿ</h2>
+                <p class="slead en" style="margin-bottom:24px;">Your CSR investment directly funds Kannada language
+                    preservation, education for underprivileged children and community development across Karnataka. All
+                    donations are 80G tax-deductible.</p>
+                <p class="slead slead-kn kn" style="margin-bottom:24px;font-family:'Noto Serif Kannada',serif;">ನಿಮ್ಮ
+                    ಸಿಎಸ್ಆರ್ ಹೂಡಿಕೆ ನೇರವಾಗಿ ಕನ್ನಡ ಭಾಷೆ ಸಂರಕ್ಷಣೆ ಮತ್ತು ಬಡ ಮಕ್ಕಳ ಶಿಕ್ಷಣಕ್ಕೆ ಹೋಗುತ್ತದೆ.</p>
+                <div class="cert-r">
+                    <div class="ci">📋</div>
+                    <div>
+                        <div class="cn en">Govt. Registered — Regn. No. 447/2011-12</div>
+                        <div class="cn kn" style="font-family:'Noto Serif Kannada',serif;">ಸರ್ಕಾರ ನೋಂದಾಯಿತ — ನೋಂ. ಸಂ.
+                            ೪೪೭/೨೦೧೧-೧೨
+                        </div>
+                        <div class="cd en">Recognised by Government of Karnataka</div>
+                    </div>
+                </div>
+                <div class="cert-r">
+                    <div class="ci">🏅</div>
+                    <div>
+                        <div class="cn">80G Certified</div>
+                        <div class="cd en">Tax-deductible under Income Tax Act Section 80G</div>
+                        <div class="cd kn" style="font-family:'Noto Serif Kannada',serif;">ಆದಾಯ ತೆರಿಗೆ ಕಾಯ್ದೆ ಸೆಕ್ಷನ್
+                            80G ಅಡಿ ತೆರಿಗೆ ವಿನಾಯಿತಿ
+                        </div>
+                    </div>
+                </div>
+                <div class="cert-r">
+                    <div class="ci">🏢</div>
+                    <div>
+                        <div class="cn en">CSR Eligible Organisation</div>
+                        <div class="cn kn" style="font-family:'Noto Serif Kannada',serif;">ಸಿಎಸ್ಆರ್ ಅರ್ಹ ಸಂಸ್ಥೆ</div>
+                        <div class="cd en">Recognised under Schedule VII — Companies Act 2013</div>
+                    </div>
+                </div>
+            </div>
+            <div class="rv" style="animation-delay:.2s">
+                <div class="slbl en">YOUR IMPACT</div>
+                <div class="slbl kn" style="font-family:'Noto Serif Kannada',serif;">ನಿಮ್ಮ ಕೊಡುಗೆ</div>
+                <div class="cbig">&#x20B9;1L</div>
+                <div style="font-size:15px;color:var(--mid);margin-bottom:24px;" class="en">can provide school supplies
+                    to 200+ students
+                </div>
+                <div style="font-size:15px;color:var(--mid);margin-bottom:24px;font-family:'Noto Serif Kannada',serif;"
+                     class="kn">೨೦೦+ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಶಾಲಾ ಸಾಮಗ್ರಿ ನೀಡಬಹುದು
+                </div>
+                <ul class="cbl">
+                    <li><span class="en">Education kits for 200+ government school students</span><span class="kn"
+                                                                                                        style="font-family:'Noto Serif Kannada',serif;">೨೦೦+ ಸರ್ಕಾರಿ ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಶಿಕ್ಷಣ ಕಿಟ್</span>
+                    </li>
+                    <li><span class="en">Support 10+ annual literary and cultural events</span><span class="kn"
+                                                                                                     style="font-family:'Noto Serif Kannada',serif;">೧೦+ ವಾರ್ಷಿಕ ಸಾಹಿತ್ಯ/ಸಾಂಸ್ಕೃತಿಕ ಕಾರ್ಯಕ್ರಮ ಬೆಂಬಲ</span>
+                    </li>
+                    <li><span class="en">Medical aid for underprivileged patients</span><span class="kn"
+                                                                                              style="font-family:'Noto Serif Kannada',serif;">ಬಡ ರೋಗಿಗಳಿಗೆ ವೈದ್ಯಕೀಯ ಸಹಾಯ</span>
+                    </li>
+                    <li><span class="en">Tree plantation and environmental drives</span><span class="kn"
+                                                                                              style="font-family:'Noto Serif Kannada',serif;">ಗಿಡ ನೆಡುವ ಮತ್ತು ಪರಿಸರ ಚಟುವಟಿಕೆ</span>
+                    </li>
+                    <li><span class="en">Brand presence at state-level Nudi Sammelana</span><span class="kn"
+                                                                                                  style="font-family:'Noto Serif Kannada',serif;">ರಾಜ್ಯ ಮಟ್ಟದ ನುಡಿ ಸಮ್ಮೇಳನದಲ್ಲಿ ಬ್ರಾಂಡ್ ಗೋಚರತೆ</span>
+                    </li>
+                    <li><span class="en">Kannada literary publications and writer support</span><span class="kn"
+                                                                                                      style="font-family:'Noto Serif Kannada',serif;">ಕನ್ನಡ ಸಾಹಿತ್ಯ ಕೃತಿ ಪ್ರಕಾಶನ ಮತ್ತು ಲೇಖಕ ಬೆಂಬಲ</span>
+                    </li>
+                </ul>
+                <div style="margin-top:24px;"><a href="#contact" class="btn1"><span
+                        class="en">Become a CSR Partner</span><span class="kn"
+                                                                    style="font-family:'Noto Serif Kannada',serif;">ಸಿಎಸ್ಆರ್ ಪಾಲುದಾರರಾಗಿ</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="si">
+        <div class="rv" style="text-align:center;margin-bottom:44px;">
+            <div class="slbl en">GET IN TOUCH</div>
+            <div class="slbl kn" style="font-family:'Noto Serif Kannada',serif;">ಸಂಪರ್ಕಿಸಿ</div>
+            <h2 class="sh2 en">Join Our <em>Cultural Mission</em></h2>
+            <h2 class="sh2 sh2-kn kn" style="font-family:'Noto Serif Kannada',serif;">ನಮ್ಮ ಸಾಂಸ್ಕೃತಿಕ ಮಿಷನ್&#x200C;ಗೆ
+                ಸೇರಿ</h2>
+            <p style="font-size:14px;color:var(--mid);" class="en">Submit this form and the Vedike team will receive
+                your details directly by email — within 24 hours.</p>
+            <p style="font-size:14px;color:var(--mid);font-family:'Noto Serif Kannada',serif;" class="kn">ಈ ಫಾರ್ಮ್ ಭರ್ತಿ
+                ಮಾಡಿದ ತಕ್ಷಣ ವೇದಿಕೆ ತಂಡಕ್ಕೆ ಇಮೇಲ್ ಮೂಲಕ ತಲುಪುತ್ತದೆ.</p>
+        </div>
+        <div class="cog">
+            <div class="rv">
+                <div class="cod">
+                    <div class="coico">📍</div>
+                    <div class="cov"><strong><span class="en">Address</span><span class="kn"
+                                                                                  style="font-family:'Noto Serif Kannada',serif;">ವಿಳಾಸ</span></strong><span
+                            class="en">No. 832, 1st Floor, 4th Main Road, Vijayanagar, Bengaluru – 560 040</span><span
+                            class="kn" style="font-family:'Noto Serif Kannada',serif;">ನಂ. ೮೩೨, ೧ನೇ ಮಹಡಿ, ೪ನೇ ಮುಖ್ಯರಸ್ತೆ, ವಿಜಯನಗರ, ಬೆಂಗಳೂರು – ೫೬೦ ೦೪೦</span>
+                    </div>
+                </div>
+                <div class="cod">
+                    <div class="coico">📞</div>
+                    <div class="cov"><strong><span class="en">Phone</span><span class="kn"
+                                                                                style="font-family:'Noto Serif Kannada',serif;">ಫೋನ್</span></strong>98868
+                        33055 &nbsp;
+                    </div>
+                </div>
+                <div class="cod">
+                    <div class="coico">✉️</div>
+                    <div class="cov"><strong>Email</strong>akksv2011@gmail.com</div>
+                </div>
+                <div class="cod">
+                    <div class="coico">🗞️</div>
+                    <div class="cov"><strong><span class="en">Magazine</span><span class="kn"
+                                                                                   style="font-family:'Noto Serif Kannada',serif;">ಪತ್ರಿಕೆ</span></strong><span
+                            class="en">Jeevanmuki — Kannada Fortnightly (15+ years)</span><span class="kn"
+                                                                                                style="font-family:'Noto Serif Kannada',serif;">ಜೀವನ್ಮುಖಿ — ಕನ್ನಡ ಪಾಕ್ಷಿಕ (೧೫+ ವರ್ಷ)</span>
+                    </div>
+                </div>
+                <div class="cod">
+                    <div class="coico">📋</div>
+                    <div class="cov"><strong><span class="en">Registration</span><span class="kn"
+                                                                                       style="font-family:'Noto Serif Kannada',serif;">ನೋಂದಣಿ</span></strong>Regn.
+                        No. 447/2011-12 · <span class="en">Recognised by Govt. of Karnataka</span><span class="kn"
+                                                                                                        style="font-family:'Noto Serif Kannada',serif;">ಕರ್ನಾಟಕ ಸರ್ಕಾರದ ಮಾನ್ಯತೆ</span>
+                    </div>
+                </div>
+                <div style="margin-top:20px;padding:18px;background:rgba(201,144,12,.08);border:1px solid rgba(201,144,12,.2);border-radius:7px;">
+                    <div style="font-size:13px;font-weight:700;margin-bottom:5px;color:var(--text);">
+                        <span class="en">📧 How the form works</span>
+                        <span class="kn"
+                              style="font-family:'Noto Serif Kannada',serif;">📧 ಫಾರ್ಮ್ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ</span>
+                    </div>
+                    <div style="font-size:13px;color:var(--mid);line-height:1.6;">
+                        <span class="en">Every submission sends an email directly to akksv2011@gmail.com with the person's name, contact, interest type and message. You will also receive a confirmation email.</span>
+                        <span class="kn" style="font-family:'Noto Serif Kannada',serif;">ಪ್ರತಿ ಸಲ್ಲಿಕೆ ನೇರವಾಗಿ akksv2011@gmail.com ಗೆ ಇಮೇಲ್ ಕಳುಹಿಸುತ್ತದೆ.</span>
+                    </div>
+                </div>
+            </div>
+            <!-- FORMSPREE form -->
+            <div class="rv" style="animation-delay:.2s">
+                <form id="cform" action="https://formspree.io/f/mjgpegrk" method="POST">
+                    <input type="hidden" name="_subject"
+                           value="New enquiry — Akhila Karnataka Kuvempu Samskrutika Vedike"/>
+                    <div class="fr2">
+                        <div class="fg2">
+                            <label><span class="en">Full Name *</span><span class="kn"
+                                                                            style="font-family:'Noto Serif Kannada',serif;">ಹೆಸರು *</span></label>
+                            <input type="text" name="name" placeholder="Your full name" required/>
+                        </div>
+                        <div class="fg2">
+                            <label><span class="en">Email *</span><span class="kn"
+                                                                        style="font-family:'Noto Serif Kannada',serif;">ಇಮೇಲ್ *</span></label>
+                            <input type="email" name="email" placeholder="your@email.com" required/>
+                        </div>
+                    </div>
+                    <div class="fr2" style="margin-bottom:0;">
+                        <div class="fg2">
+                            <label><span class="en">Phone</span><span class="kn"
+                                                                      style="font-family:'Noto Serif Kannada',serif;">ಫೋನ್</span></label>
+                            <input type="tel" name="phone" placeholder="+91 98XXX XXXXX"/>
+                        </div>
+                        <div class="fg2">
+                            <label><span class="en">City</span><span class="kn"
+                                                                     style="font-family:'Noto Serif Kannada',serif;">ನಗರ</span></label>
+                            <input type="text" name="city" placeholder="Bengaluru"/>
+                        </div>
+                    </div>
+                    <div class="fg2">
+                        <label><span class="en">Organisation / Company</span><span class="kn"
+                                                                                   style="font-family:'Noto Serif Kannada',serif;">ಸಂಸ್ಥೆ / ಕಂಪನಿ</span></label>
+                        <input type="text" name="organisation" placeholder="Your organisation (for CSR enquiries)"/>
+                    </div>
+                    <div class="fg2">
+                        <label><span class="en">I am interested in *</span><span class="kn"
+                                                                                 style="font-family:'Noto Serif Kannada',serif;">ನನ್ನ ಆಸಕ್ತಿ *</span></label>
+                        <select name="interest" required>
+                            <option value="">-- Select --</option>
+                            <option>CSR Partnership</option>
+                            <option>Donation (80G benefit)</option>
+                            <option>Volunteering</option>
+                            <option>Membership</option>
+                            <option>Attending Events / Programs</option>
+                            <option>Jeevanmuki Magazine Subscription</option>
+                            <option>Media / Press Enquiry</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="fg2">
+                        <label><span class="en">Message</span><span class="kn"
+                                                                    style="font-family:'Noto Serif Kannada',serif;">ಸಂದೇಶ</span></label>
+                        <textarea name="message"
+                                  placeholder="Tell us how you would like to get involved, or any questions..."></textarea>
+                    </div>
+                    <div class="fsr">
+                        <button type="submit" class="btn1" id="sbtn">
+                            <span class="en">Send Message ✉️</span><span class="kn"
+                                                                         style="font-family:'Noto Serif Kannada',serif;">ಸಂದೇಶ ಕಳುಹಿಸಿ ✉️</span>
+                        </button>
+                        <span class="fnote en">We respond within 24 hours</span>
+                        <span class="fnote kn" style="font-family:'Noto Serif Kannada',serif;">೨೪ ಗಂಟೆಯಲ್ಲಿ ಉತ್ತರ</span>
+                    </div>
+                    <div id="f-success">&#10003; <span class="en">Thank you! Your message has been sent to the Vedike team. We will contact you soon.</span><span
+                            class="kn" style="font-family:'Noto Serif Kannada',serif;">ಧನ್ಯವಾದ! ನಿಮ್ಮ ಸಂದೇಶ ವೇದಿಕೆ ತಂಡಕ್ಕೆ ತಲುಪಿದೆ. ಶೀಘ್ರದಲ್ಲೇ ಸಂಪರ್ಕಿಸುತ್ತೇವೆ.</span>
+                    </div>
+                    <div id="f-error">&#9888; <span class="en">Something went wrong. Please email us directly: akksv2011@gmail.com</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="fi">
+        <div class="ftop">
+            <div>
+                <div class="fname en">Akhila Karnataka Kuvempu Samskrutika Vedike (R)</div>
+                <div class="fname kn" style="font-family:'Noto Serif Kannada',serif;font-size:17px;">ಅಖಿಲ ಕರ್ನಾಟಕ
+                    ಕುವೆಂಪು ಸಾಂಸ್ಕೃತಿಕ ವೇದಿಕೆ (ರಿ.)
+                </div>
+                <p class="ftag2 en" style="margin-top:8px;">Preserving Karnataka's literary and cultural heritage since
+                    2011. Inspired by National Poet Kuvempu's vision of universal humanity.</p>
+                <p class="ftag2 kn" style="margin-top:8px;font-family:'Noto Serif Kannada',serif;">೨೦೧೧ ರಿಂದ ಕರ್ನಾಟಕದ
+                    ಸಾಹಿತ್ಯ ಮತ್ತು ಸಾಂಸ್ಕೃತಿಕ ಪರಂಪರೆ ಸಂರಕ್ಷಣೆ.</p>
+                <div style="margin-top:14px;display:flex;gap:7px;flex-wrap:wrap;">
+                    <span style="background:rgba(201,144,12,.17);border:1px solid rgba(201,144,12,.28);color:var(--gold-l);font-size:11px;padding:3px 9px;border-radius:3px;">Regn. 447/2011-12</span>
+                    <span style="background:rgba(201,144,12,.17);border:1px solid rgba(201,144,12,.28);color:var(--gold-l);font-size:11px;padding:3px 9px;border-radius:3px;">80G Certified</span>
+                    <span style="background:rgba(201,144,12,.17);border:1px solid rgba(201,144,12,.28);color:var(--gold-l);font-size:11px;padding:3px 9px;border-radius:3px;">CSR Eligible</span>
+                </div>
+            </div>
+            <div class="fcol">
+                <h4><span class="en">Quick Links</span><span class="kn" style="font-family:'Noto Serif Kannada',serif;">ಶೀಘ್ರ ಲಿಂಕ್</span>
+                </h4>
+                <ul>
+                    <li><a href="#about"><span class="en">About Us</span><span class="kn"
+                                                                               style="font-family:'Noto Serif Kannada',serif;">ಬಗ್ಗೆ</span></a>
+                    </li>
+                    <li><a href="#programs"><span class="en">Programs</span><span class="kn"
+                                                                                  style="font-family:'Noto Serif Kannada',serif;">ಕಾರ್ಯಕ್ರಮ</span></a>
+                    </li>
+                    <li><a href="#founder"><span class="en">Founder</span><span class="kn"
+                                                                                style="font-family:'Noto Serif Kannada',serif;">ಸಂಸ್ಥಾಪಕ</span></a>
+                    </li>
+                    <li><a href="#testi"><span class="en">Endorsements</span><span class="kn"
+                                                                                   style="font-family:'Noto Serif Kannada',serif;">ಅಭಿಪ್ರಾಯ</span></a>
+                    </li>
+                    <li><a href="#csr">CSR &amp; Donate</a></li>
+                    <li><a href="#contact"><span class="en">Contact</span><span class="kn"
+                                                                                style="font-family:'Noto Serif Kannada',serif;">ಸಂಪರ್ಕ</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="fcol">
+                <h4><span class="en">Contact</span><span class="kn" style="font-family:'Noto Serif Kannada',serif;">ಸಂಪರ್ಕ</span>
+                </h4>
+                <ul>
+                    <li><a href="tel:9886833055">&#128222; 98868 33055</a></li>
+                    <li><a href="mailto:akksv2011@gmail.com">&#9993; akksv2011@gmail.com</a></li>
+                    <li><a href="#contact">Vijayanagar, Bengaluru 560 040</a></li>
+                </ul>
+            </div>
+            <div class="fcol">
+                <h4><span class="en">Support</span><span class="kn" style="font-family:'Noto Serif Kannada',serif;">ಬೆಂಬಲ</span>
+                </h4>
+                <ul>
+                    <li><a href="#csr"><span class="en">CSR Partnership</span><span class="kn"
+                                                                                    style="font-family:'Noto Serif Kannada',serif;">ಸಿಎಸ್ಆರ್</span></a>
+                    </li>
+                    <li><a href="#csr"><span class="en">Donate (80G)</span><span class="kn"
+                                                                                 style="font-family:'Noto Serif Kannada',serif;">ದೇಣಿಗೆ</span></a>
+                    </li>
+                    <li><a href="#contact"><span class="en">Volunteer</span><span class="kn"
+                                                                                  style="font-family:'Noto Serif Kannada',serif;">ಸ್ವಯಂಸೇವಕ</span></a>
+                    </li>
+                    <li><a href="#contact"><span class="en">Membership</span><span class="kn"
+                                                                                   style="font-family:'Noto Serif Kannada',serif;">ಸದಸ್ಯತ್ವ</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="fbot">
+            <div class="fcopy">&#169; 2025 Akhila Karnataka Kuvempu Samskrutika Vedike (R) · Bengaluru · Regn. No.
+                447/2011-12
+            </div>
+            <div class="fcopy en">Recognised by Govt. of Karnataka · 80G · CSR Eligible</div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function setLang(l) {
+        document.querySelectorAll('.lbtn').forEach(b => b.classList.remove('on'));
+        if (l === 'kn') {
+            document.body.classList.add('lkn');
+            document.querySelectorAll('.lbtn')[1].classList.add('on');
+        } else {
+            document.body.classList.remove('lkn');
+            document.querySelectorAll('.lbtn')[0].classList.add('on');
+        }
+    }
+
+    // Scroll reveal
+    const ro = new IntersectionObserver(es => {
+        es.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('on');
+                ro.unobserve(e.target);
+            }
+        });
+    }, {threshold: 0.08});
+    document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+    // Nav scroll
+    window.addEventListener('scroll', () => {
+        document.getElementById('mn').style.background = window.scrollY > 60 ? 'rgba(18,2,0,.98)' : 'rgba(18,2,0,.94)';
+    });
+
+    // Enhanced smooth scroll with offset for fixed header (fixed reload jump)
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const targetId = this.getAttribute('href').substring(1);
+            if (targetId === '') return;
+            const targetEl = document.getElementById(targetId);
+            if (targetEl) {
+                e.preventDefault();
+                const headerHeight = document.getElementById('lb')?.offsetHeight + document.getElementById('mn')?.offsetHeight || 100;
+                const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
+                window.scrollTo({top: elementPosition - headerHeight, behavior: 'smooth'});
+                history.pushState(null, null, `#${targetId}`);
+            }
+        });
+    });
+
+    // On load, remove any hash and scroll to top to prevent auto‑jump
+    if (window.location.hash) {
+        window.scrollTo(0, 0);
+        history.replaceState(null, null, ' ');
+    }
+
+    // Ensure loader completely covers before hiding (prevents jump)
+    window.addEventListener('load', function () {
+        const loader = document.getElementById('loader');
+        if (loader) {
+            setTimeout(() => {
+                loader.style.opacity = '0';
+                setTimeout(() => loader.style.display = 'none', 500);
+            }, 1800);
+        }
+    });
+
+    // Form
+    const form = document.getElementById('cform');
+    if (form) {
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const btn = document.getElementById('sbtn');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            try {
+                const r = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {'Accept': 'application/json'}
+                });
+                if (r.ok) {
+                    document.getElementById('f-success').style.display = 'block';
+                    form.reset();
+                } else throw new Error();
+            } catch {
+                document.getElementById('f-error').style.display = 'block';
+            }
+            btn.textContent = 'Send Message ✉️';
+            btn.disabled = false;
+        });
+    }
+</script>
+</body>
+</html>
