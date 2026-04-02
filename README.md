@@ -1,13 +1,11 @@
 # Akhila Karnataka Kuvempu Samskrutika Vedike (R) – Official Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/your-badge-id/deploy-status)](https://app.netlify.com/sites/your-site-name/deploys) <!-- optional -->
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Official static website for **Akhila Karnataka Kuvempu Samskrutika Vedike (R)** – a registered cultural organisation working for the promotion of Kannada language, literature, and social welfare, inspired by the vision of Rashtrakavi Kuvempu.
 
-🔗 **Live site:** [your-netlify-or-github-pages-url]
+🔗 **Live site:** https://akksv.vercel.app
 
----
+
 
 ## 📌 About the Organisation
 
@@ -24,7 +22,7 @@ Official static website for **Akhila Karnataka Kuvempu Samskrutika Vedike (R)** 
 
 This website serves as a digital presence for the Vedike, enabling people to learn about our work, get involved, donate via CSR/80G, and contact us easily.
 
----
+
 
 ## 🛠️ Tech Stack
 
@@ -32,9 +30,9 @@ This website serves as a digital presence for the Vedike, enabling people to lea
 - **JavaScript** – scroll animations, language toggle (English/Kannada)  
 - **Formspree** – handles contact form submissions without a backend  
 - **GitHub** – version control  
-- **Netlify / GitHub Pages** – static hosting  
+- **Vercel** – static hosting  
 
----
+
 
 ## 📧 Form Submissions
 
